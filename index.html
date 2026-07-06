@@ -1,107 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gửi cho Thuy An ❤️</title>
 <style>
-body{
-margin:0;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:linear-gradient(135deg,#ffd6e7,#ffeef5);
-font-family:Arial,sans-serif;
-overflow:hidden;
-}
-.card{
-width:85%;
-max-width:360px;
-background:#fff;
-padding:25px;
-border-radius:25px;
-box-shadow:0 0 25px rgba(255,105,180,.4);
-text-align:center;
-animation:fade 1s;
-position:relative;
-z-index:2;
-}
-h2{color:#ff4f88;}
-p{
-line-height:1.8;
-color:#555;
-}
-button{
-margin-top:15px;
-padding:10px 25px;
-border:none;
-border-radius:20px;
-background:#ff6ea8;
-color:white;
-font-size:16px;
-cursor:pointer;
-}
-#text{display:none;}
-@keyframes fade{
-from{opacity:0;transform:scale(.8);}
-to{opacity:1;transform:scale(1);}
-}
-.heart{
-position:fixed;
-font-size:22px;
-animation:fly 6s linear infinite;
-opacity:.7;
-}
-@keyframes fly{
-0%{transform:translateY(100vh);}
-100%{transform:translateY(-100vh);}
-}
+body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;background:#ffd9e8;font-family:Arial;overflow:hidden}
+.card{background:#fff;padding:25px;border-radius:20px;max-width:340px;text-align:center;box-shadow:0 0 20px #ff9fc2;z-index:2}
+button{padding:10px 20px;border:0;border-radius:20px;background:#ff5c9f;color:#fff;font-size:17px}
+#letter{display:none;margin-top:15px;color:#555;line-height:1.6}
+h2,h3{color:#ff4f88}
+.f{position:fixed;top:-20px;animation:r 6s linear;font-size:24px}
+@keyframes r{to{transform:translateY(110vh)}}
 </style>
 </head>
-
 <body>
 
 <div class="card">
 <h2>💌 Gửi cho Thuy An 💌</h2>
 
-<button onclick="showLetter()">Mở thư ❤️</button>
+<button onclick="openLetter()">Mở thư ❤️</button>
 
-<div id="text">
+<div id="letter">
 <p>
-Mình không rõ bạn đang trải qua những gì, nhưng mình chỉ muốn nhắc bạn rằng những ngày khó khăn không kéo dài mãi mãi.
-<br><br>
-Dù đó là gì, bạn mạnh mẽ hơn bạn nghĩ rất nhiều và những ngày tươi sáng hơn đang đến gần.
-
-<br><br>
-
-Hãy kiên trì hơn một chút nữa, bạn đang làm tốt hơn những gì bạn có thể nhận ra.
-
+Mình không rõ bạn đang trải qua những gì, nhưng mình chỉ muốn nhắc bạn rằng những ngày khó khăn không kéo dài mãi mãi.<br><br>
+Dù đó là gì, bạn mạnh mẽ hơn bạn nghĩ rất nhiều và những ngày tươi sáng hơn đang đến gần.<br><br>
+Hãy kiên trì hơn một chút nữa, bạn đang làm tốt hơn những gì bạn có thể nhận ra. 🌸
 </p>
 
-<h3 style="color:#ff4f88;">— Từ Ngọc Hải ❤️</h3>
-
+<h3>— Từ Ngọc Hải ❤️</h3>
 </div>
-
 </div>
 
 <script>
-function showLetter() {
-    document.getElementById("text").style.display = "block";
+function openLetter(){
+document.getElementById("letter").style.display="block";
 }
-
-setInterval(function(){
-    var h=document.createElement("div");
-    h.className="heart";
-    h.innerHTML=Math.random()>0.5?"💖":"🌸";
-    h.style.left=Math.random()*100+"vw";
-    h.style.fontSize=(20+Math.random()*20)+"px";
-    document.body.appendChild(h);
-    setTimeout(function(){
-        h.remove();
-    },6000);
-},350);
+setInterval(()=>{
+let a=document.createElement("div");
+a.className="f";
+a.innerHTML=Math.random()>0.5?"🌸":"💖";
+a.style.left=Math.random()*100+"vw";
+document.body.appendChild(a);
+setTimeout(()=>a.remove(),6000);
+},300);
 </script>
 
 </body>
