@@ -1,1 +1,75 @@
-# hi
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gửi cho Thuy An ❤️</title>
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+.card{
+width:85%;
+max-width:360px;
+background:#fff;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,105,180,.4);
+text-align:center;
+animation:fade 1s;
+position:relative;
+z-index:2;
+}
+h2{color:#ff4f88;}
+p{
+line-height:1.8;
+color:#555;
+}
+button{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+border-radius:20px;
+background:#ff6ea8;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+#text{display:none;}
+@keyframes fade{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+.heart{
+position:fixed;
+font-size:22px;
+animation:fly 6s linear infinite;
+opacity:.7;
+}
+@keyframes fly{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>💌 Gửi cho Thuy An 💌</h2>
+
+<button onclick="showLetter()">Mở thư ❤️</button>
+
+<div id="text">
+<p>
+Mình không rõ bạn đang trải qua những gì, nhưng mình chỉ muốn nhắc bạn rằng những ngày khó khăn không kéo dài mãi mãi.
+<br><br>
+Dù đó là gì, bạn
